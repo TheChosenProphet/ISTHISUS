@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>☠️ Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 40px;
+      color: white;
+    }
+
+    .skull {
+      animation: spin 3s linear infinite;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      margin: 10px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const totalSkulls = 300;
+
+    for (let i = 0; i < totalSkulls; i++) {
+      const skull = document.createElement('div');
+      skull.className = 'skull';
+      skull.textContent = '☠️';
+      document.body.appendChild(skull);
+    }
+
+    setTimeout(() => {
+      window.location.href = 'https://www.heavensgate.com/';
+    }, 5000);
+  </script>
+</body>
+</html>
